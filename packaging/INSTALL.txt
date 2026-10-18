@@ -1,0 +1,63 @@
+ClipNest 0.3.1 for Windows
+==========================
+
+A free, private screenshot organizer. Press Win+Shift+J, drag around anything on
+screen, type a short note, press Enter. A small AI on your computer files it for you.
+
+
+WHAT YOU NEED
+- Windows 10 or 11, 64-bit (Intel or AMD)
+- 8 GB RAM or more
+- About 2-4 GB of free disk space (the app is small; the AI model is 1.2 GB, or
+  2.6 GB for the more accurate one, plus an optional 0.7 GB image add-on)
+- Internet once, to download the AI model. After that it works fully offline.
+
+
+INSTALL
+1. Unzip this folder.
+2. Double-click "ClipNest_0.3.1_x64-setup.exe".
+3. Windows may show "Windows protected your PC". The app isn't code-signed yet, so
+   click "More info", then "Run anyway".
+4. The installer needs no admin rights. It installs for your user only.
+5. Windows 10 only: if WebView2 isn't installed yet, the installer downloads it
+   automatically (Windows 11 already has it).
+
+
+FIRST RUN
+- Follow the short welcome steps: pick what you do, check your categories, then set
+  up the AI.
+- On "Set up the AI", ClipNest shows how much memory (RAM) your computer has and
+  recommends a model: Standard (1.2 GB, fine on 8 GB) or More accurate (2.6 GB, for
+  16 GB or more). Click Download. The next step unlocks when it finishes; if the
+  download is interrupted, it resumes by itself.
+- The app lives in the system tray (near the clock). Closing the window keeps it
+  running so the shortcut keeps working. Right-click the tray icon to quit.
+- If Win+Shift+J is taken by another app, the app uses Ctrl+Shift+J instead
+  (Settings > Capture shows which). You can pick any shortcut there.
+
+
+CHECK THE DOWNLOAD (optional)
+SHA256SUMS.txt contains the installer's checksum. To verify, open PowerShell in this
+folder and run:
+    Get-FileHash ".\ClipNest_0.3.1_x64-setup.exe" -Algorithm SHA256
+The hash should match the one in SHA256SUMS.txt.
+
+
+UNINSTALL
+Settings > Apps > Installed apps > ClipNest > Uninstall.
+Your screenshots stay in %APPDATA%\com.reportedsnipping.desktop unless you delete
+that folder too. Settings > Storage > "Export all data" saves everything as a zip
+first.
+
+
+PRIVACY
+Nothing you capture ever leaves the computer. The only internet use is the one-time
+AI download (engine from llama.cpp's GitHub releases, model from Hugging Face), both
+checked against fixed SHA-256 hashes.
+
+
+UPGRADING FROM "REPORTED SNIPPING"
+ClipNest is the new name of Reported Snipping and uses the same library, so your
+screenshots carry over. After installing ClipNest, uninstall "Reported Snipping" in
+Settings > Apps > Installed apps so only one copy runs (two copies fight over the
+shortcut).

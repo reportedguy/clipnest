@@ -1,0 +1,100 @@
+[
+  {
+    "user": "Categories:\n- Ideas: content ideas, things I might make or write\n- Resources: tools, websites, libraries, references\n- Miscellaneous\n\nScreenshot text:\n\"\"\"\nEasy Paneer Bhurji\nIngredients: 200g paneer, 1 onion, 1 tomato\nCook onions till golden, add tomato, crumble paneer.\n\"\"\"\n\nThe person's note (most important): content idea: 30-second recipe reels for students",
+    "assistant": {
+      "note_purpose": "content idea: 30-second recipe reels for students",
+      "title": "Recipe reels idea for students",
+      "summary": "An idea to make 30-second recipe reels for students, using a simple paneer bhurji recipe as the example.",
+      "categories": [
+        "Ideas"
+      ],
+      "tags": [
+        "recipes",
+        "reels",
+        "students"
+      ],
+      "urls": [],
+      "note_has_action_intent": false,
+      "deadline": null
+    }
+  },
+  {
+    "user": "Categories:\n- Ideas: content ideas, things I might make or write\n- Resources: tools, websites, libraries, references\n- Miscellaneous\n\nScreenshot text:\n\"\"\"\nORDER #48213-A\nQty 2 USB-C cable Rs 398\nSubtotal Rs 647 GST included\nThank you for shopping\n\"\"\"\n\nThe person's note (most important): (none)",
+    "assistant": {
+      "note_purpose": "",
+      "title": "Order receipt for USB-C cables",
+      "summary": "A shopping receipt for two USB-C cables, totalling Rs 647.",
+      "categories": [
+        "Miscellaneous"
+      ],
+      "tags": [
+        "receipt",
+        "shopping",
+        "order"
+      ],
+      "urls": [],
+      "note_has_action_intent": false,
+      "deadline": null
+    }
+  },
+  {
+    "user": "Categories:\n- Ideas: content ideas, things I might make or write\n- Resources: tools, websites, libraries, references\n- Portfolio Redesign: screens, fonts and references for my new portfolio site\n- Miscellaneous\n\nScreenshot text:\n\"\"\"\nGeneral Sans\nA modern, neo-grotesque sans serif. Free for personal and commercial use.\nDownload family  fontshare.com\n\"\"\"\n\nThe person's note (most important): font for the portfolio redesign",
+    "assistant": {
+      "note_purpose": "font for the portfolio redesign",
+      "title": "General Sans font for the portfolio",
+      "summary": "A free neo-grotesque sans serif font from Fontshare, saved as a candidate for the portfolio redesign.",
+      "categories": [
+        "Portfolio Redesign",
+        "Resources"
+      ],
+      "tags": [
+        "font",
+        "sans serif",
+        "typography"
+      ],
+      "urls": [
+        "fontshare.com"
+      ],
+      "note_has_action_intent": false,
+      "deadline": null
+    }
+  },
+  {
+    "user": "Categories:\n- Ideas: content ideas, things I might make or write\n- Resources: tools, websites, libraries, references\n- Miscellaneous\n\nScreenshot text:\n\"\"\"\nHermes\nSign in to continue\nVersion 2.4\n\"\"\"\n\nThe person's note (most important): setup hermes again with new code",
+    "assistant": {
+      "note_purpose": "set up Hermes again with the new code",
+      "title": "Set up Hermes again with the new code",
+      "summary": "The Hermes sign-in screen, version 2.4, saved as a reminder to set Hermes up again using the new code.",
+      "categories": [
+        "Miscellaneous"
+      ],
+      "tags": [
+        "hermes",
+        "setup",
+        "todo"
+      ],
+      "urls": [],
+      "note_has_action_intent": true,
+      "deadline": null
+    }
+  },
+  {
+    "user": "Categories:\n- Ideas: content ideas, things I might make or write\n- Learning: knowledge, explanations, tips, how-tos\n- Miscellaneous\n\nScreenshot text:\n\"\"\"\nGit tip: use git switch -c <branch> to create and move to a new branch in one step.\n\"\"\"\n\nThe person's note (most important): just testing",
+    "assistant": {
+      "note_purpose": "",
+      "title": "Git tip: create and switch branches in one step",
+      "summary": "A tip that git switch -c creates a new branch and moves to it in a single command.",
+      "categories": [
+        "Learning"
+      ],
+      "tags": [
+        "git",
+        "tips",
+        "command line"
+      ],
+      "urls": [],
+      "note_has_action_intent": false,
+      "deadline": null
+    }
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "$comment": "Registry of downloadable AI components. Swap models by editing this file; no code changes needed. Sizes in bytes, sha256 of the exact file. ram_peak_mb is measured peak working set of llama-server (4 threads, ctx 4096) on the spike machine; see DECISIONS.md.",
+  "version": 1,
+  "engine": {
+    "id": "llama.cpp-b11669-win-cpu-x64",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-win-cpu-x64.zip",
+    "size": 19537886,
+    "sha256": "37b3efcf962847ca869745fd4ccf7f5e7e8dacfeff9fa3523b4ca8cdc66d632b",
+    "binary": "llama-server.exe",
+    "license": "MIT"
+  },
+  "default_profile": "standard",
+  "profiles": {
+    "standard": { "text": "qwen3.5-2b-q4km", "vision": "qwen3.5-2b-mmproj-f16", "min_ram_gb": 8 },
+    "accurate": { "text": "qwen3.5-4b-q4km", "vision": "qwen3.5-4b-mmproj-f16", "min_ram_gb": 16 }
+  },
+  "models": [
+    {
+      "id": "qwen3.5-2b-q4km",
+      "role": "text",
+      "name": "Qwen3.5 2B (Q4_K_M)",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/Qwen3.5-2B-Q4_K_M.gguf",
+      "size": 1280835840,
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223",
+      "ram_peak_mb": 2990,
+      "license": "Apache-2.0",
+      "chat_template_kwargs": { "enable_thinking": false }
+    },
+    {
+      "id": "qwen3.5-2b-mmproj-f16",
+      "role": "vision",
+      "requires": "qwen3.5-2b-q4km",
+      "name": "Qwen3.5 2B vision projector (F16)",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/mmproj-F16.gguf",
+      "size": 668227264,
+      "sha256": "7035e9cb8d7c6a9681d07eef9a364783e86ea4cd73faab2eabb4f43a101830c7",
+      "ram_peak_mb": 2990,
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "qwen3.5-4b-q4km",
+      "role": "text",
+      "name": "Qwen3.5 4B (Q4_K_M)",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-Q4_K_M.gguf",
+      "size": 2740937888,
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+      "ram_peak_mb": 4445,
+      "license": "Apache-2.0",
+      "chat_template_kwargs": { "enable_thinking": false }
+    },
+    {
+      "id": "qwen3.5-4b-mmproj-f16",
+      "role": "vision",
+      "requires": "qwen3.5-4b-q4km",
+      "name": "Qwen3.5 4B vision projector (F16)",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/mmproj-F16.gguf",
+      "size": 672423616,
+      "sha256": "cd88edcf8d031894960bb0c9c5b9b7e1fea6ebee02b9f7ce925a00d12891f864",
+      "ram_peak_mb": 5476,
+      "license": "Apache-2.0"
+    }
+  ]
+}

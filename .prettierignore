@@ -1,0 +1,11 @@
+dist
+node_modules
+src-tauri
+pnpm-lock.yaml
+*.md
+models.json
+config
+prompts
+scripts
+packaging
+.github

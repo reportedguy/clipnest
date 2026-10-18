@@ -1,0 +1,60 @@
+name: Bug report
+description: Something in ClipNest doesn't work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't include private screenshots, notes or personal data.
+        Security problems go through [SECURITY.md](https://github.com/reportedguy/clipnest/blob/main/SECURITY.md), not here.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Press Win+Shift+J
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ClipNest version
+      description: Settings › About.
+      placeholder: "0.3.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 24H2"
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: AI model
+      options:
+        - Not set up
+        - Standard
+        - More accurate
+        - Don't know
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: Memory (RAM), number of monitors and their scaling, if relevant.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: From `%APPDATA%\com.reportedsnipping.desktop\logs\`. Remove anything private first.
+      render: text

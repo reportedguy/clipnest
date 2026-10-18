@@ -1,0 +1,34 @@
+# Words and phrases in a note that mean "I want to act on this".
+# A deadline found in a screenshot is only surfaced (home strip + reminder) when the
+# note shows intent: the AI's own judgement OR any line below appearing in the note.
+# One entry per line, case-insensitive, matched as whole words. Lines starting with #
+# are ignored. Rebuild the app after editing.
+register
+registration
+apply
+application
+submit
+submission
+participate
+join
+enroll
+enrol
+sign up
+signup
+check later
+check this later
+remind me
+reminder
+deadline
+due
+watch later
+attend
+rsvp
+book
+buy before
+last date
+don't miss
+dont miss
+todo
+to do
+must do

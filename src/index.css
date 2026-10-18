@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Design system: Airtable-style editorial calm (see DESIGN.md). White canvas, near-black
+   ink, modest type weights, color carried by signature surfaces, not by decoration.
+   Haas Grotesk isn't redistributable; Inter (bundled, with display optical sizes) is the
+   design system's own documented substitute. */
+
+/* Theme is driven by data-theme on <html> (set from the OS or the user's setting),
+   so `dark:` utilities follow the app's choice rather than only the media query. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  /* Surfaces */
+  --color-canvas: #ffffff; /* page */
+  --color-surface-raised: #ffffff; /* cards, menus, dialogs */
+  --color-surface: #f8fafc; /* surface-soft: wells, quiet panels */
+  --color-surface-strong: #e0e2e6;
+
+  /* Text */
+  --color-ink: #181d26;
+  --color-body: #333840;
+  --color-ink-muted: #41454d;
+
+  /* Lines */
+  --color-line: #dddddd; /* hairline */
+  --color-line-strong: #9297a0;
+
+  /* Actions */
+  --color-primary: #181d26;
+  --color-primary-active: #0d1218;
+  --color-on-primary: #ffffff;
+  --color-brand: #0058fe; /* the app's one blue: logo, send, focus, selection */
+  --color-brand-active: #0047cc;
+  --color-link: #0058fe;
+  --color-focus: #0058fe;
+  --color-success: #006400;
+
+  /* Signature surfaces: the only places color is loud. */
+  --color-signature-coral: #aa2d00;
+  --color-signature-forest: #0a2e0e;
+  --color-signature-navy: #181d26;
+  --color-signature-cream: #f5e9d4;
+  --color-signature-peach: #fcab79;
+  --color-signature-mint: #a8d8c4;
+  --color-signature-yellow: #f4d35e;
+  --color-signature-mustard: #d9a441;
+
+  --font-sans: "Inter Variable", "Segoe UI", system-ui, sans-serif;
+
+  /* Radius hierarchy: 12px actions & big surfaces, 10px cards, 6px inputs. */
+  --radius-card: 10px;
+  --radius-action: 12px;
+  --radius-input: 6px;
+}
+
+/* Dark theme, derived from the system's own dark surfaces (#181d26 / #1d1f25). */
+[data-theme="dark"] {
+  color-scheme: dark; /* native scrollbars and form controls */
+  --color-canvas: #181d26;
+  --color-surface-raised: #1d1f25;
+  --color-surface: #22262e;
+  --color-surface-strong: #2c313a;
+  --color-ink: #ffffff;
+  --color-body: #d6d9de;
+  --color-ink-muted: #a3a8b0;
+  --color-line: #343944;
+  --color-line-strong: #5d636d;
+  --color-primary: #ffffff;
+  --color-primary-active: #e0e2e6;
+  --color-on-primary: #181d26;
+  --color-link: #4d8dff; /* the brand blue, lifted for contrast on dark */
+  --color-focus: #4d8dff;
+  --color-signature-navy: #0d1218;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display sizes use Inter's display optical size, the substitute for Haas Groot Disp. */
+.type-display {
+  font-variation-settings: "opsz" 32;
+  font-weight: 400;
+  color: var(--color-ink);
+  letter-spacing: 0;
+}
+
+/* The ClipNest wordmark in the title bar. */
+.type-brand {
+  font-family: "Bricolage Grotesque Variable", var(--font-sans);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Text fields in focus: one minimal dashed brand-blue border, no extra ring. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-style: dashed;
+  border-color: var(--color-focus);
+}
+
+/* The capture popup's page is see-through around the card, so its soft shadow shows. */
+html.popup-page,
+html.popup-page body,
+html.popup-page #root {
+  background: transparent;
+}
+
+/* Category color dots get a hairline ring in the surrounding text color, so every palette
+   color reads on any pill: cream on white, navy on a selected pill, forest/navy in dark. */
+.color-dot {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 20%, transparent);
+}
+[data-theme="dark"] .color-dot {
+  box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 45%, transparent);
+}

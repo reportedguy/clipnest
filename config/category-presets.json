@@ -1,0 +1,156 @@
+{
+  "_comment": "Starting categories offered during setup, by profession. Compiled into the app (src-tauri/src/presets.rs checks it in tests). Hints are shown to the AI to help it file screenshots, so keep them concrete. Names: at most 40 characters; hints: at most 160. Miscellaneous is always added by the app; don't list it here.",
+  "presets": [
+    {
+      "id": "product-manager",
+      "name": "Product Manager",
+      "description": "Features, feedback, specs and metrics",
+      "icon": "kanban",
+      "categories": [
+        { "name": "Feature Ideas", "hint": "product and feature ideas, things to build or improve" },
+        { "name": "User Feedback", "hint": "user reviews, complaints, interview notes, support tickets, survey answers" },
+        { "name": "Competitor Research", "hint": "other products, competitor features, pricing pages, launches" },
+        { "name": "Specs & Docs", "hint": "PRDs, requirements, user stories, product documents" },
+        { "name": "Metrics & Analytics", "hint": "dashboards, charts, KPIs, funnels, experiment results" },
+        { "name": "Roadmap & Planning", "hint": "roadmaps, priorities, sprint plans, timelines" },
+        { "name": "Meeting Notes", "hint": "meeting notes, decisions, action items, chat threads" },
+        { "name": "Design References", "hint": "UI screens, flows, wireframes, UX patterns" },
+        { "name": "Tools", "hint": "software, templates, websites and frameworks for product work" },
+        { "name": "Deadlines", "hint": "launches, due dates, events, anything with a date to act on" }
+      ]
+    },
+    {
+      "id": "graphic-designer",
+      "name": "Graphic Designer",
+      "description": "Inspiration, type, color and client work",
+      "icon": "palette",
+      "categories": [
+        { "name": "Inspiration", "hint": "designs, posters and artwork I like, moodboard material" },
+        { "name": "Typography", "hint": "fonts, type pairings, lettering, text layouts" },
+        { "name": "Color Palettes", "hint": "color schemes, gradients, hex codes, swatches" },
+        { "name": "Logos & Branding", "hint": "logos, brand identities, style guides, packaging" },
+        { "name": "Layouts & UI", "hint": "web and app layouts, grids, UI components, landing pages" },
+        { "name": "Icons & Illustrations", "hint": "icons, illustrations, characters, drawing styles" },
+        { "name": "Mockups & Assets", "hint": "mockups, stock photos, textures, templates, free resources" },
+        { "name": "Client Feedback", "hint": "client comments, revision requests, briefs, approvals" },
+        { "name": "Tutorials", "hint": "design tips, tool tricks, how-tos for Figma, Photoshop, Illustrator" },
+        { "name": "Gigs & Deadlines", "hint": "freelance jobs, contests, invoices, due dates" }
+      ]
+    },
+    {
+      "id": "video-editor",
+      "name": "Video Editor",
+      "description": "Shots, grading, sound and client notes",
+      "icon": "clapperboard",
+      "categories": [
+        { "name": "Shot Inspiration", "hint": "film stills, framing, camera angles, scenes I like" },
+        { "name": "Color Grading", "hint": "color grades, LUTs, film looks, before and after" },
+        { "name": "Transitions & Effects", "hint": "transitions, motion graphics, VFX, text animations" },
+        { "name": "Music & Sound", "hint": "songs, sound effects, music libraries, audio tips" },
+        { "name": "Editing Tutorials", "hint": "how-tos and techniques for Premiere, DaVinci Resolve, After Effects, CapCut" },
+        { "name": "Footage & Assets", "hint": "stock footage, overlays, templates, presets, plugins" },
+        { "name": "Client Notes", "hint": "client feedback, timestamps to fix, briefs, scripts" },
+        { "name": "Software Tips", "hint": "shortcuts, settings, export settings, hardware" },
+        { "name": "Gigs & Deadlines", "hint": "editing jobs, delivery dates, invoices, contests" }
+      ]
+    },
+    {
+      "id": "founder",
+      "name": "Founder",
+      "description": "Ideas, customers, fundraising and growth",
+      "icon": "rocket",
+      "categories": [
+        { "name": "Startup Ideas", "hint": "business ideas, problems worth solving, product concepts" },
+        { "name": "Competitors", "hint": "competitor products, pricing, launches, market maps" },
+        { "name": "Customer Feedback", "hint": "customer messages, reviews, interview notes, feature requests" },
+        { "name": "Fundraising & Investors", "hint": "investors, pitch decks, term sheets, funding news, accelerators" },
+        { "name": "Hiring", "hint": "candidates, job posts, team, compensation, culture" },
+        { "name": "Growth & Marketing", "hint": "growth tactics, ads, social posts, landing pages, launch ideas" },
+        { "name": "Metrics", "hint": "revenue, users, dashboards, charts, financial numbers" },
+        { "name": "Legal & Finance", "hint": "contracts, company registration, taxes, invoices, banking" },
+        { "name": "Tools", "hint": "software, services and templates for running the company" },
+        { "name": "Events & Deadlines", "hint": "applications, demo days, events, anything with a date to act on" }
+      ]
+    },
+    {
+      "id": "student",
+      "name": "Student",
+      "description": "Classes, exams, research and opportunities",
+      "icon": "graduation-cap",
+      "categories": [
+        { "name": "Lecture Notes", "hint": "slides, class notes, explanations from lectures" },
+        { "name": "Assignments & Deadlines", "hint": "homework, projects, submissions, due dates" },
+        { "name": "Exam Prep", "hint": "questions, formulas, summaries, past papers, revision" },
+        { "name": "Research & Papers", "hint": "papers, citations, sources, thesis material" },
+        { "name": "Scholarships & Opportunities", "hint": "scholarships, competitions, hackathons, programs to apply for" },
+        { "name": "Internships & Jobs", "hint": "internship and job posts, resumes, interview prep" },
+        { "name": "Courses & Tutorials", "hint": "online courses, tutorials, how-tos, study resources" },
+        { "name": "Ideas", "hint": "project ideas, things I might make or write" },
+        { "name": "Watch Later", "hint": "videos, talks, films to watch" }
+      ]
+    },
+    {
+      "id": "developer",
+      "name": "Developer",
+      "description": "Code, bugs, docs and tools",
+      "icon": "code",
+      "categories": [
+        { "name": "Code Snippets", "hint": "code examples, commands, configs, regex, SQL" },
+        { "name": "Bugs & Errors", "hint": "error messages, stack traces, failing tests, issues to fix" },
+        { "name": "Docs & APIs", "hint": "documentation, API references, endpoints, specs" },
+        { "name": "Tools & Libraries", "hint": "libraries, frameworks, developer tools, extensions" },
+        { "name": "Architecture", "hint": "system design, diagrams, database schemas, infrastructure" },
+        { "name": "Learning", "hint": "tutorials, explanations, tips, articles about programming" },
+        { "name": "Side Project Ideas", "hint": "app ideas, things to build, hackathon ideas" },
+        { "name": "Jobs & Opportunities", "hint": "job posts, hackathons, open source, interviews, deadlines" }
+      ]
+    },
+    {
+      "id": "marketer",
+      "name": "Marketer",
+      "description": "Ads, copy, campaigns and analytics",
+      "icon": "megaphone",
+      "categories": [
+        { "name": "Ad Inspiration", "hint": "ads, creatives, banners and commercials I like" },
+        { "name": "Social Posts", "hint": "social media posts, reels, threads, viral content" },
+        { "name": "Copywriting", "hint": "headlines, taglines, email copy, landing page text" },
+        { "name": "Campaign Ideas", "hint": "campaign concepts, launch plans, content calendars" },
+        { "name": "Competitor Research", "hint": "competitor ads, positioning, pricing, websites" },
+        { "name": "Analytics", "hint": "dashboards, reports, campaign results, conversion numbers" },
+        { "name": "SEO", "hint": "keywords, search rankings, SEO tips, backlinks" },
+        { "name": "Tools", "hint": "marketing software, templates, AI tools, plugins" },
+        { "name": "Deadlines", "hint": "launch dates, events, campaign due dates, anything with a date to act on" }
+      ]
+    },
+    {
+      "id": "content-creator",
+      "name": "Content Creator / Writer",
+      "description": "Ideas, hooks, research and brand deals",
+      "icon": "pen-line",
+      "categories": [
+        { "name": "Content Ideas", "hint": "ideas for posts, videos, articles, newsletters" },
+        { "name": "Hooks & Headlines", "hint": "opening lines, titles, hooks, captions that work" },
+        { "name": "Research", "hint": "facts, quotes, statistics, sources for my content" },
+        { "name": "Thumbnails & Visuals", "hint": "thumbnails, cover images, visual styles, b-roll ideas" },
+        { "name": "Trends", "hint": "trending topics, memes, formats, audio trends" },
+        { "name": "Collabs & Brand Deals", "hint": "brand offers, sponsorships, collaborations, rates" },
+        { "name": "Audience Feedback", "hint": "comments, DMs, reviews, questions from my audience" },
+        { "name": "Tools", "hint": "editing, writing and scheduling tools, templates" },
+        { "name": "Deadlines", "hint": "publish dates, brand deliverables, events, anything with a date to act on" }
+      ]
+    },
+    {
+      "id": "everyone",
+      "name": "A bit of everything",
+      "description": "General categories that suit most people",
+      "icon": "shapes",
+      "categories": [
+        { "name": "Ideas", "hint": "content ideas, things I might make or write" },
+        { "name": "Learning", "hint": "knowledge, explanations, tips, how-tos" },
+        { "name": "Resources", "hint": "tools, websites, libraries, references" },
+        { "name": "Opportunities & Deadlines", "hint": "competitions, applications, events, jobs, anything with a date to act on" },
+        { "name": "Watch Later", "hint": "videos, talks, courses, films to watch" }
+      ]
+    }
+  ]
+}

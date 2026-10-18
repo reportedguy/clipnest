@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- ClipNest logo, dark: a dashed crop frame; the finishing corner is brand blue. -->
+  <rect width="1024" height="1024" rx="230" fill="#0d0f14"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48">
+    <g stroke="#ffffff">
+      <path d="M236 336 H436 M336 236 V436"/>
+      <path d="M496 336 H620 Q688 336 688 404 V560" stroke-dasharray="70 56"/>
+      <path d="M336 496 V620 Q336 688 404 688 H560" stroke-dasharray="70 56"/>
+    </g>
+    <g stroke="#0058fe">
+      <path d="M588 688 H788 M688 588 V788"/>
+    </g>
+  </g>
+</svg>

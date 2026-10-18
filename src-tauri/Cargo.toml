@@ -1,0 +1,49 @@
+[package]
+name = "clipnest"
+version = "0.3.1"
+description = "Local-first screenshot organizer for Windows with an on-device AI"
+authors = ["Jatin Gupta"]
+license = "MIT"
+repository = "https://github.com/reportedguy/clipnest"
+edition = "2021"
+publish = false
+
+[lib]
+name = "clipnest_lib"
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.7.3", features = [] }
+
+[dependencies]
+base64 = "0.23.1"
+chrono = "0.4.45"
+image = { version = "0.25.10", default-features = false, features = ["png", "webp"] }
+percent-encoding = "2.3.2"
+regex = "1.13.1"
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sha2 = "0.11.1"
+tauri = { version = "2.12.4", features = ["tray-icon", "image-png"] }
+tauri-plugin-autostart = "2.7.0"
+tauri-plugin-clipboard-manager = "2.5.0"
+tauri-plugin-global-shortcut = "2.4.1"
+tauri-plugin-notification = "2.7.0"
+tauri-plugin-opener = "2.7.2"
+tauri-plugin-single-instance = "2.5.4"
+thiserror = "2.0.21"
+tracing = "0.1.44"
+tracing-appender = "0.2.5"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+ureq = { version = "3.4.2", features = ["json"] }
+xcap = "0.9.8"
+zip = { version = "9.0.3", default-features = false, features = ["deflate"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
+
+[target."cfg(windows)".dependencies]
+windows = { version = "0.62.2", features = ["Media_Ocr", "Graphics_Imaging", "Security_Cryptography", "Storage_Streams", "Foundation", "Foundation_Collections", "Globalization", "Win32_Foundation", "Win32_Graphics_Gdi", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse", "Win32_UI_HiDpi", "Win32_System_LibraryLoader", "Win32_System_Threading", "Win32_System_JobObjects", "Win32_Storage_FileSystem", "Win32_Security", "Win32_System_Power", "Win32_System_SystemInformation"] }

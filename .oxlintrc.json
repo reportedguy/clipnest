@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "react-hooks"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-underscore-dangle": "off",
+    "no-shadow": "off",
+    "react/set-state-in-effect": "off",
+    "react/exhaustive-effect-dependencies": "off"
+  },
+  "ignorePatterns": ["dist", "node_modules", "src-tauri"]
+}

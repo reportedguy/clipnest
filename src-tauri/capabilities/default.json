@@ -1,0 +1,14 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "App windows: core APIs, plus window controls for the main window's own title bar. App commands are allowed by default; plugin JS APIs are not exposed because the Rust side drives them.",
+  "windows": ["main", "overlay-*", "popup-*"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-minimize",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-close",
+    "core:window:allow-start-dragging",
+    "core:window:allow-is-maximized"
+  ]
+}

@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+src-tauri/target/
+src-tauri/gen/schemas/
+*.tsbuildinfo
+
+# Installers and release artifacts
+*.exe
+*.msi
+*.zip
+SHA256SUMS.txt
+
+# AI engine and model downloads (fetched at runtime, see models.json)
+*.gguf
+*.part
+.spikes/
+
+# Local data, databases and logs
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.log
+
+# Secrets and local config (the app reads none, but keep them out regardless)
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Python tooling (scripts/)
+__pycache__/
+.venv/
+venv/
+
+# Editors, OS and agent files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+.claude/

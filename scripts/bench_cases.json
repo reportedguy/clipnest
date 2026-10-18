@@ -1,0 +1,69 @@
+{
+  "today": "2026-10-15",
+  "locale": "India (dates are DD/MM/YYYY)",
+  "timezone": "Asia/Kolkata",
+  "categories": [
+    { "name": "Ideas", "hint": "content ideas, things I might make or write" },
+    { "name": "Learning", "hint": "knowledge, explanations, tips, how-tos" },
+    { "name": "Resources", "hint": "tools, websites, libraries, references" },
+    { "name": "Opportunities & Deadlines", "hint": "competitions, applications, events, jobs, anything with a date to act on" },
+    { "name": "Watch Later", "hint": "videos, talks, courses, films to watch" },
+    { "name": "Miscellaneous", "hint": null }
+  ],
+  "cases": [
+    {
+      "id": "hackathon-ddmm",
+      "note": "register for this",
+      "ocr": "Global Student Hackathon 2026\nRegistrations close on 12/11/2026. Apply at https://hack.example.org/apply\nPrize pool: Rs 5,00,000 for the top three teams. Teams of up to 4 people.\nThemes: climate, health, education and open data.",
+      "expect": { "category": "Opportunities & Deadlines", "intent": true, "deadline_iso": "2026-11-12" }
+    },
+    {
+      "id": "youtube-watch",
+      "note": "watch later",
+      "ocr": "How Figma Designs Its Design System | Config 2026\n1.2M views  3 weeks ago\nFigma\nSubscribe",
+      "expect": { "category": "Watch Later", "intent": true, "deadline_iso": null }
+    },
+    {
+      "id": "tweet-idea",
+      "note": "video idea",
+      "ocr": "@growthnotes\nNobody talks about this: the first 3 seconds of a reel decide 80% of retention.\nOpen with the result, not the setup.\n12:41 PM · Oct 9, 2026 · 48K Views",
+      "expect": { "category": "Ideas", "intent": false, "deadline_iso": null }
+    },
+    {
+      "id": "python-tip",
+      "note": "",
+      "ocr": "Python tip: use enumerate() instead of range(len(x))\nfor i, item in enumerate(items, start=1):\n    print(i, item)\nIt is cleaner and avoids off-by-one errors.",
+      "expect": { "category": "Learning", "intent": false, "deadline_iso": null }
+    },
+    {
+      "id": "tool-site",
+      "note": "",
+      "ocr": "Excalidraw\nVirtual whiteboard for sketching hand-drawn like diagrams\nCollaborative and end-to-end encrypted.\nexcalidraw.com  Start drawing",
+      "expect": { "category": "Resources", "intent": false, "deadline_iso": null }
+    },
+    {
+      "id": "note-outranks",
+      "note": "content idea: 30-second recipe reels for students",
+      "ocr": "Easy Paneer Bhurji\nIngredients: 200g paneer, 1 onion, 1 tomato, 2 green chillies, turmeric, salt\nCook onions till golden, add tomato and spices, crumble paneer, cook 3 minutes.",
+      "expect": { "category": "Ideas", "intent": false, "deadline_iso": null }
+    },
+    {
+      "id": "receipt-misc",
+      "note": "",
+      "ocr": "ORDER #48213-A\nQty 2  USB-C cable  Rs 398\nQty 1  Phone stand   Rs 249\nSubtotal Rs 647  GST included\nThank you for shopping",
+      "expect": { "category": "Miscellaneous", "intent": false, "deadline_iso": null }
+    },
+    {
+      "id": "scholarship-no-intent",
+      "note": "",
+      "ocr": "Note: The scholarship portal opens on 3 March and closes on 28 March 2027.\nEligible: undergraduate students in their second or third year.\nDocuments needed: transcript, two references, and a 500-word statement.",
+      "expect": { "category": "Opportunities & Deadlines", "intent": false, "deadline_iso": "2027-03-28" }
+    },
+    {
+      "id": "no-year-date",
+      "note": "remind me to submit",
+      "ocr": "Call for papers: Student Design Journal\nSubmissions due 5 Jan\nUp to 2,000 words. Email submissions to editors@sdj.example.com",
+      "expect": { "category": "Opportunities & Deadlines", "intent": true, "deadline_iso": "2027-01-05" }
+    }
+  ]
+}
