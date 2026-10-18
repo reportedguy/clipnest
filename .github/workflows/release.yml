@@ -88,7 +88,7 @@ jobs:
           $notes += "`n`n**Install:** download the setup .exe below. It's unsigned, so Windows may show `"Windows protected your PC`": click More info, then Run anyway. Checksums are in SHA256SUMS.txt."
           Set-Content release-notes.md $notes -Encoding utf8
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: clipnest-windows
           path: |
