@@ -4,6 +4,9 @@ All notable changes to ClipNest are listed here. The format follows [Keep a Chan
 
 ## [Unreleased]
 
+### Added
+- Press Space on a focused screenshot card to expand or collapse its summary. Screen readers announce the state.
+
 ## [0.3.1] - 2026-10-19
 
 First public release.

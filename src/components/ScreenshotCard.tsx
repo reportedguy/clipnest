@@ -59,6 +59,14 @@ export const ScreenshotCard = forwardRef<HTMLElement, Props>(function Screenshot
   const details = showSummary || expanded;
   const canToggle = !showSummary && !pending && !failed;
   const act = (a: CardAction) => onAction(card, a);
+  const toggleDetails = () => {
+    setExpanded((value) => !value);
+    setOpen(false);
+  };
+  const setFocusTarget = (el: HTMLElement | null) => {
+    if (typeof ref === "function") ref(el);
+    else if (ref) ref.current = el;
+  };
 
   // An expanded card folds back when you click anywhere outside it.
   const self = useRef<HTMLElement | null>(null);
@@ -78,11 +86,10 @@ export const ScreenshotCard = forwardRef<HTMLElement, Props>(function Screenshot
     <article
       ref={(el) => {
         self.current = el;
-        if (typeof ref === "function") ref(el);
-        else if (ref) ref.current = el;
+        if (!canToggle) setFocusTarget(el);
       }}
-      tabIndex={0}
-      onKeyDown={onKeyDown}
+      tabIndex={canToggle ? undefined : 0}
+      onKeyDown={canToggle ? undefined : onKeyDown}
       aria-label={card.title ?? card.userNote ?? "Screenshot"}
       className="group flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface-raised"
     >
@@ -120,8 +127,7 @@ export const ScreenshotCard = forwardRef<HTMLElement, Props>(function Screenshot
         onClick={(e) => {
           // A click on the card's text area expands it; its own buttons and links act alone.
           if (canToggle && !(e.target as HTMLElement).closest("button, a")) {
-            setExpanded((v) => !v);
-            setOpen(false);
+            toggleDetails();
           }
         }}
       >
@@ -144,7 +150,23 @@ export const ScreenshotCard = forwardRef<HTMLElement, Props>(function Screenshot
           </div>
         ) : (
           <>
-            <h3 className="text-base leading-[1.4] font-medium text-ink">{card.title}</h3>
+            <h3 className="text-base leading-[1.4] font-medium text-ink">
+              {canToggle ? (
+                <button
+                  ref={setFocusTarget}
+                  type="button"
+                  aria-expanded={expanded}
+                  aria-label={card.title || card.userNote || "Screenshot"}
+                  onClick={toggleDetails}
+                  onKeyDown={onKeyDown}
+                  className="text-left"
+                >
+                  {card.title}
+                </button>
+              ) : (
+                card.title
+              )}
+            </h3>
             {details && card.summary && <p className="text-sm leading-[1.45] text-body">{card.summary}</p>}
           </>
         )}

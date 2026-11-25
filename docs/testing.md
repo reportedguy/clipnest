@@ -52,6 +52,7 @@ Status key: ✅ verified · ⏳ not yet testable (later phase) · ⚠️ needs h
 - ✅ Onboarding completes and is remembered.
 - ⏳ By hand: add/rename/recolor/reorder/delete a category; deleting moves its items to Miscellaneous.
 - ⏳ By hand: in a category, use each card action (move with Undo, edit title/summary, edit note, copy image, open in viewer, retry, delete with Undo); arrow keys, Enter and Delete on focused cards.
+- With summaries hidden, focus a filed card's title. Space should show its summary and announce the expanded state; a second Space should collapse it. Arrow to a different card and press Enter to open its image. When summaries are always visible, Space should leave them visible.
 - ⏳ By hand: change the capture shortcut in Settings, including a taken one (should explain and keep the old one).
 - ⏳ Dev build: Settings › Developer › "Fill queued screenshots with sample AI results" shows finished cards.
 
